@@ -1,3 +1,3 @@
 venv
-training_artifacts
-inference_artifacts
+training_artifacts/*
+inference_artifacts/*
