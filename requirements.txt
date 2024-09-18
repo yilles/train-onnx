@@ -59,7 +59,7 @@ notebook==7.2.2
 notebook_shim==0.2.4
 numpy==2.1.1
 onnx==1.16.2
-onnxruntime-training==1.19.2
+onnxruntime-training-cpu==1.19.2
 overrides==7.7.0
 packaging==24.1
 pandocfilters==1.5.1
