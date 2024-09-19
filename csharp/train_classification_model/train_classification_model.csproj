@@ -1,0 +1,280 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.Training" Version="1.19.2" />
+    <PackageReference Include="NumSharp" Version="0.30.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../data/images/cat/cat01.jpeg" Link="data/images/cat/cat01.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat02.jpeg" Link="data/images/cat/cat02.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat03.jpeg" Link="data/images/cat/cat03.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat04.jpeg" Link="data/images/cat/cat04.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat05.jpeg" Link="data/images/cat/cat05.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat06.jpeg" Link="data/images/cat/cat06.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat07.jpeg" Link="data/images/cat/cat07.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat08.jpeg" Link="data/images/cat/cat08.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat09.jpeg" Link="data/images/cat/cat09.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat10.jpeg" Link="data/images/cat/cat10.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat11.jpeg" Link="data/images/cat/cat11.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat12.jpeg" Link="data/images/cat/cat12.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat13.jpeg" Link="data/images/cat/cat13.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat14.jpeg" Link="data/images/cat/cat14.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat15.jpeg" Link="data/images/cat/cat15.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat16.jpeg" Link="data/images/cat/cat16.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat17.jpeg" Link="data/images/cat/cat17.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat18.jpeg" Link="data/images/cat/cat18.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat19.jpeg" Link="data/images/cat/cat19.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cat/cat20.jpeg" Link="data/images/cat/cat20.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow01.jpeg" Link="data/images/cow/cow01.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow02.jpeg" Link="data/images/cow/cow02.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow03.jpeg" Link="data/images/cow/cow03.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow04.jpeg" Link="data/images/cow/cow04.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow05.jpeg" Link="data/images/cow/cow05.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow06.jpeg" Link="data/images/cow/cow06.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow07.jpeg" Link="data/images/cow/cow07.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow08.jpeg" Link="data/images/cow/cow08.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow09.jpeg" Link="data/images/cow/cow09.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow10.jpeg" Link="data/images/cow/cow10.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow11.jpeg" Link="data/images/cow/cow11.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow12.jpeg" Link="data/images/cow/cow12.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow13.jpeg" Link="data/images/cow/cow13.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow14.jpeg" Link="data/images/cow/cow14.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow15.jpeg" Link="data/images/cow/cow15.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow16.jpeg" Link="data/images/cow/cow16.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow17.jpeg" Link="data/images/cow/cow17.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow18.jpeg" Link="data/images/cow/cow18.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow19.jpeg" Link="data/images/cow/cow19.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/cow/cow20.jpeg" Link="data/images/cow/cow20.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog01.jpeg" Link="data/images/dog/dog01.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog02.jpeg" Link="data/images/dog/dog02.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog03.jpeg" Link="data/images/dog/dog03.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog04.jpeg" Link="data/images/dog/dog04.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog05.jpeg" Link="data/images/dog/dog05.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog06.jpeg" Link="data/images/dog/dog06.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog07.jpeg" Link="data/images/dog/dog07.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog08.jpeg" Link="data/images/dog/dog08.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog09.jpeg" Link="data/images/dog/dog09.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog10.jpeg" Link="data/images/dog/dog10.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog11.jpeg" Link="data/images/dog/dog11.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog12.jpeg" Link="data/images/dog/dog12.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog13.jpeg" Link="data/images/dog/dog13.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog14.jpeg" Link="data/images/dog/dog14.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog15.jpeg" Link="data/images/dog/dog15.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog16.jpeg" Link="data/images/dog/dog16.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog17.jpeg" Link="data/images/dog/dog17.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog18.jpeg" Link="data/images/dog/dog18.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog19.jpeg" Link="data/images/dog/dog19.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/dog/dog20.jpeg" Link="data/images/dog/dog20.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant01.jpeg" Link="data/images/elephant/elephant01.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant02.jpeg" Link="data/images/elephant/elephant02.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant03.jpeg" Link="data/images/elephant/elephant03.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant04.jpeg" Link="data/images/elephant/elephant04.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant05.jpeg" Link="data/images/elephant/elephant05.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant06.jpeg" Link="data/images/elephant/elephant06.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant07.jpeg" Link="data/images/elephant/elephant07.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant08.jpeg" Link="data/images/elephant/elephant08.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant09.jpeg" Link="data/images/elephant/elephant09.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant10.jpeg" Link="data/images/elephant/elephant10.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant11.jpeg" Link="data/images/elephant/elephant11.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant12.jpeg" Link="data/images/elephant/elephant12.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant13.jpeg" Link="data/images/elephant/elephant13.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant14.jpeg" Link="data/images/elephant/elephant14.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant15.jpeg" Link="data/images/elephant/elephant15.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant16.jpeg" Link="data/images/elephant/elephant16.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant17.jpeg" Link="data/images/elephant/elephant17.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant18.jpeg" Link="data/images/elephant/elephant18.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant19.jpeg" Link="data/images/elephant/elephant19.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/elephant/elephant20.jpeg" Link="data/images/elephant/elephant20.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../data/images/test/test1.jpg" Link="data/images/test/test1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../training_artifacts/checkpoint" Link="training_artifacts/checkpoint">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../training_artifacts/eval_model.onnx" Link="training_artifacts/eval_model.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../training_artifacts/mobilenetv2.onnx" Link="training_artifacts/mobilenetv2.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../training_artifacts/optimizer_model.onnx" Link="training_artifacts/optimizer_model.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="../../training_artifacts/training_model.onnx" Link="training_artifacts/training_model.onnx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
