@@ -1,3 +1,6 @@
 venv
 training_artifacts/*
 inference_artifacts/*
+
+csharp/train_classification_model/obj
+csharp/train_classification_model/bin
